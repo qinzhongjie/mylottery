@@ -7,23 +7,16 @@
 
 <title>参与抽奖的人员</title>
 <link href="css/index.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="css/daojishi.css"/>
+<link rel="stylesheet" type="text/css" href="css/daojishi.css"/>
 <script src="js/jquery.min.js"></script>
 </head>
 
 <body onload="daoJiShi()">
 
 <!--倒计时-->
-<!--<div id="daojishi">
-	<div id="day"></div><p id="point">:</p>
-	<div id="hour"></div><p id="point">:</p>
-	<div id="minute"></div><p id="point">:</p>
-	<div id="second"></div>
-</div>-->
-
 <div class="bg" id="bg">
 	<div class="time">
-		<p id="text">倒计时：</p>
+		<div id="text">倒计时：</div>
 		<div id="day"></div><div id="point">:</div>
 	    <div id="hour"></div><div id="point">:</div>
 		<div id="minute"></div><div id="point">:</div>
@@ -31,13 +24,9 @@
 	</div>
 </div>
 		
-		
-		
-		
-
 <!-- -------------摇奖排行榜---------------  -->
 <div class="Top_Record">
-	<div class="record_Top"><p>百事蚂蚁商城会员</p></div>
+	
     <div class="topRec_List">
   		<dl>
         	<dd>参与抽奖会员手机号码</dd>
@@ -72,6 +61,10 @@
         </div>
     </div>
 </div> 
+
+<div class="shouji">
+	
+</div>
 
 <script type="text/javascript">
 	var endDate = new Date(2016,0,8,12,10,00)			//截止时间设置，月要减去1；
@@ -110,8 +103,6 @@
 		}
 	}
 </script>
-
-
 
 <script type="text/javascript"> 
 	  function autoScroll(obj){  
