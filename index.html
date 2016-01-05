@@ -7,12 +7,33 @@
 
 <title>参与抽奖的人员</title>
 <link href="css/index.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/daojishi.css"/>
 <script src="js/jquery.min.js"></script>
 </head>
 
-<body>
+<body onload="daoJiShi()">
 
+<!--倒计时-->
+<!--<div id="daojishi">
+	<div id="day"></div><p id="point">:</p>
+	<div id="hour"></div><p id="point">:</p>
+	<div id="minute"></div><p id="point">:</p>
+	<div id="second"></div>
+</div>-->
 
+<div class="bg" id="bg">
+	<div class="time">
+		<p id="text">倒计时：</p>
+		<div id="day"></div><div id="point">:</div>
+	    <div id="hour"></div><div id="point">:</div>
+		<div id="minute"></div><div id="point">:</div>
+		<div id="second"></div>
+	</div>
+</div>
+		
+		
+		
+		
 
 <!-- -------------摇奖排行榜---------------  -->
 <div class="Top_Record">
@@ -52,7 +73,43 @@
     </div>
 </div> 
 
-
+<script type="text/javascript">
+	var endDate = new Date(2016,0,8,12,10,00)			//截止时间设置，月要减去1；
+	function daoJiShi(){
+		var now = new Date();
+		var oft = Math.round((endDate-now)/1000);
+		var ofd = parseInt(oft/3600/24);
+		var ofh = parseInt((oft%(3600*24))/3600);
+		var ofm = parseInt((oft%3600)/60);
+		var ofs = oft%60;
+		oft = checkTime(oft);
+		ofd = checkTime(ofd);
+		ofh = checkTime(ofh);
+		ofm = checkTime(ofm);
+		ofs = checkTime(ofs);
+		
+		document.getElementById('day').innerHTML = ofd;
+		document.getElementById('hour').innerHTML = ofh;
+		document.getElementById('minute').innerHTML = ofm;
+		document.getElementById('second').innerHTML = ofs;
+		
+		if (ofs<0){
+			document.getElementById('bg').innerHTML = '商城开始抽奖'
+			return;
+		}
+		
+		t = setTimeout(function(){
+			daoJiShi();
+		},500);
+		
+		function checkTime(i){
+			if(i<10){
+				i="0"+i;
+			}
+			return i;
+		}
+	}
+</script>
 
 
 
@@ -66,7 +123,6 @@
 		}  
 		$(function(){  
 			setInterval('autoScroll(".maquee")',3000);
-			setInterval('autoScroll(".apple")',2000);
 			  
 		}) 
 		
