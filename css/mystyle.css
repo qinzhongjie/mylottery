@@ -1,3 +1,13 @@
-.container-background {
-	background-color: #1B96EE;
+
+.header {
+	background-image: url(../images/toububeijing.png);
+	background-color: #da0b00;
+	background-position: center center;
+}
+.opacity {
+	margin-top: 30px;
+    color:#fff;  
+    background:rgba(0,0,0,0.5);  
+    background:#000 9;/*CSS Hack,只能对ie9以下浏览器ie6,ie7,ie8有效，否侧ie10,FF,Cherome会失去透明效果*/  
+    filter:Alpha(opacity=60);/*只对ie7,ie8有效*/  
 }
