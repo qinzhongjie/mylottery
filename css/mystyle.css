@@ -61,4 +61,14 @@ li {
 	text-align: center;
 	color: #FFFFFF;
 }
-
+.shouji{
+	width: 100%;
+}
+.join{
+	margin-top: 30px;
+}
+.footer-right{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
