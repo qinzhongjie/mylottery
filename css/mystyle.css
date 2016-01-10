@@ -19,10 +19,10 @@ li {
 }
 
 *{
-	font-family: "微软雅黑";
+	font-family:"微软雅黑";
 }
 .body-color {
-	background-color: #da0b00;
+	background-color: /*#da0b00*/ #b0b4b0;
 }
 .header {
 	background-image: url(../images/toububeijing.png);
@@ -62,7 +62,7 @@ li {
 	color: #FFFFFF;
 }
 .shouji{
-	width: 100%;
+	width: 90%;
 }
 .join{
 	margin-top: 30px;
@@ -70,5 +70,5 @@ li {
 .footer-right{
 	text-align: center;
 	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
