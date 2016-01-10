@@ -44,14 +44,13 @@ var endDate = new Date(2016,0,10,15,46,00)			//截止时间设置，月要用截
 
 //用户数据表
 	function autoScroll(obj){  
-		$(obj).find("tr").animate({  
-			marginTop : "-39px"  
-		},500,function(){  
-			$(this).css({marginTop : "0px"}).find("tr:first").appendTo(this);  
-		})  
-	}  
-	
-	$(function(){  
-		alert("hello");
-		setInterval(autoScroll("#user"),1000);		  
-	}) 
+			$(obj).find("ul").animate({  
+				marginTop : "-39px"  
+			},500,function(){  
+				$(this).css({marginTop : "0px"}).find("li:first").appendTo(this);  
+			})  
+		}  
+		$(function(){  
+			setInterval('autoScroll(".maquee")',1000);
+			  
+		}) 
