@@ -43,7 +43,7 @@ var endDate = new Date(2016,0,11,13,2,00)			//截止时间设置，月要用截�
 	}
 
 
-//用户数据表
+//用户数据表动画
 	function autoScroll(obj){  
 			$(obj).find("ul").animate({  
 				marginTop : "-39px"  
@@ -55,3 +55,29 @@ var endDate = new Date(2016,0,11,13,2,00)			//截止时间设置，月要用截�
 			setInterval('autoScroll(".maquee")',1000);
 			  
 		}) 
+		
+
+//从服务器提取用户数据
+			$(function(){
+				getStock();
+			});
+			function getStock(){
+				$.ajax({
+					type:"get",
+					url:"getStock.php",
+					dataType:"json",
+					success:function(data){
+						console.log(data);
+						var html = "";
+						$(data).each(function(){
+							html += "<li>";
+							html += "<div>"+this.code+"</div>";
+							html += "<div>"+this.name+"</div>";
+							html += "<div>"+this.tell+"</div>";
+							html += "<div>"+this.time+"</div>";
+							html += "</li>";
+						});
+						$(".body").html(html);
+					}
+				});
+			}
