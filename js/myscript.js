@@ -1,6 +1,6 @@
 //倒计时
 var timer1 = null;
-var endDate = new Date(2016,0,13,14,28,00)			//截止时间设置，月要用截至时间减去1，然后填入此处；
+var endDate = new Date(2016,0,15,14,28,00)			//截止时间设置，月要用截至时间减去1，然后填入此处；
 	function daoJiShi(){
 		var now = new Date();
 		var oft = Math.round((endDate-now)/1000);
@@ -19,7 +19,7 @@ var endDate = new Date(2016,0,13,14,28,00)			//截止时间设置，月要用截
 		document.getElementById('minute').innerHTML = ofm;
 		document.getElementById('second').innerHTML = ofs;
 
-		if (ofs<=0){
+		if (ofs<0){
 			clearInterval(timer1);
 			document.getElementById('timerblock').innerHTML = '恭喜手机号码为180****6105的用户成为今天的幸运用户！';
 			$("#timerblock").css({
