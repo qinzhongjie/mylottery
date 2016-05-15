@@ -1,6 +1,6 @@
 //倒计时
 var timer1 = null;
-var endDate = new Date(2016,0,15,14,28,00)			//截止时间设置，月要用截至时间减去1，然后填入此处；
+var endDate = new Date(2016,10,15,14,28,00)			//截止时间设置，月要用截至时间减去1，然后填入此处；
 	function daoJiShi(){
 		var now = new Date();
 		var oft = Math.round((endDate-now)/1000);
